@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text" parent="TextAppearance.AppCompat" />
+
+    <style name="TextInputLayoutHint" parent="Text.Medium.Caption" />
+
+    <style name="TextInputLayoutHint.Default">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="TextInputLayoutHint.Error">
+        <item name="android:textColor">@color/color_input_error</item>
+    </style>
+
+    <style name="MyTicketsTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+</resources>

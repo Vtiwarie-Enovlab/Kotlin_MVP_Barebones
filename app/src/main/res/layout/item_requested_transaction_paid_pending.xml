@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rect_rounded_alpha_7"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="20dp"
+    tools:background="?android:attr/colorPrimary">
+
+    <TextView
+        android:id="@+id/requested_paid_pending_description"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_white_alpha_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1x Middle Balcony" />
+
+    <TextView
+        android:id="@+id/requested_paid_pending_caption"
+        style="@style/Text.Medium.Medium.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/my_tickets_requested_pending_paid"
+        android:textColor="@color/color_on_sale_chance_great"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requested_paid_pending_description" />
+
+</android.support.constraint.ConstraintLayout>

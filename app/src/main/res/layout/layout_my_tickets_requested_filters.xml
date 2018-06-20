@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_large"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.enovlab.yoop.ui.widget.FilterStateButton
+        android:id="@+id/filter_all"
+        style="@style/Button.Filter"
+        android:text="@string/my_tickets_filter_all"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_width="52dp"
+        tools:textColor="@color/colorPrimary"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:fsb_colorActivated="?android:attr/colorPrimary"
+        app:fsb_colorDeactivated="@color/color_white_alpha_70"/>
+
+    <com.enovlab.yoop.ui.widget.FilterStateButton
+        android:id="@+id/filter_list"
+        style="@style/Button.Filter"
+        android:text="@string/my_tickets_filter_list"
+        tools:textColor="@color/colorPrimary"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:fsb_colorActivated="?android:attr/colorPrimary"
+        app:fsb_colorDeactivated="@color/color_white_alpha_70"/>
+
+    <com.enovlab.yoop.ui.widget.FilterStateButton
+        android:id="@+id/filter_on_sale"
+        style="@style/Button.Filter"
+        android:text="@string/event_landing_on_sale"
+        tools:textColor="@color/colorPrimary"
+        app:fsb_colorActivated="?android:attr/colorPrimary"
+        app:fsb_colorDeactivated="@color/color_white_alpha_70"/>
+
+</LinearLayout>

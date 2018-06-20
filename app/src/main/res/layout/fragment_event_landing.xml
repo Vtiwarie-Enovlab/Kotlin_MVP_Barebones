@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="?android:attr/colorPrimary">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/layout_event_landing_app_bar"
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            tools:visibility="gone" />
+
+        <include
+            layout="@layout/layout_event_landing_app_bar_scrolled"
+            android:id="@+id/app_bar_scrolled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            tools:visibility="gone"/>
+
+        <include
+            android:id="@+id/scroll_view"
+            layout="@layout/layout_event_landing_content"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="@color/color_black_alpha_50"
+        tools:visibility="visible"
+        android:focusable="true" />
+
+    <include
+        android:id="@+id/transactions_sheet"
+        tools:visibility="visible"
+        android:visibility="gone"
+        layout="@layout/layout_event_landing_transactions_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>

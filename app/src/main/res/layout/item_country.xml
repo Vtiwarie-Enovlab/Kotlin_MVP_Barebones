@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_grey">
+
+    <TextView
+        android:id="@+id/flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_large"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_large"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="flag" />
+
+    <TextView
+        android:id="@+id/country"
+        style="@style/Text.Regular.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:paddingBottom="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_large"
+        app:layout_constraintStart_toEndOf="@id/flag"
+        tools:text="United States" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/color_white_alpha_15"
+        app:layout_constraintTop_toBottomOf="@id/country" />
+
+</android.support.constraint.ConstraintLayout>

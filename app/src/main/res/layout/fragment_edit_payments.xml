@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:background="?android:attr/colorPrimary">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_edit_payments_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/default_card"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@drawable/background_manage_payments_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/include">
+
+        <ImageView
+            android:id="@id/card_logo"
+            android:layout_width="49dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_medium"
+            tools:src="@drawable/ic_visa_large" />
+
+        <TextView
+            android:id="@+id/card_number"
+            style="@style/Text.Bold.Large"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="**** 1234" />
+
+        <TextView
+            android:id="@+id/expiry"
+            style="@style/Text.Bold.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_default"
+            tools:text="01/01" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/container_billing"
+        layout="@layout/layout_payments_billing_template"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintTop_toBottomOf="@+id/default_card" />
+
+    <TextView
+        android:id="@+id/switch_default_label"
+        style="@style/Text.Medium.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="@string/payments_default"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_billing" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/switch_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_large"
+        android:checked="true"
+        app:layout_constraintStart_toEndOf="@+id/switch_default_label"
+        app:layout_constraintTop_toBottomOf="@+id/container_billing" />
+
+    <Button
+        android:id="@+id/delete_payment"
+        style="@style/Button.Removable"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_delete_white_24dp"
+        android:text="@string/payments_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

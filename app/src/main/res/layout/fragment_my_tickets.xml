@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="?android:attr/colorPrimary">
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <android.support.design.widget.TabLayout
+            android:id="@+id/my_tickets_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            app:tabMode="fixed"
+            app:tabTextColor="@color/color_white_alpha_70"
+            app:tabSelectedTextColor="@color/color_white"
+            app:tabTextAppearance="@style/MyTicketsTabText"
+            app:tabIndicatorColor="?android:attr/colorAccent"
+            app:tabIndicatorHeight="6dp"
+            android:elevation="2dp"/>
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="3dp"
+            android:background="@color/color_white_alpha_50"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_gravity="bottom"
+            android:background="@color/color_timeline_background"/>
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/my_tickets_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

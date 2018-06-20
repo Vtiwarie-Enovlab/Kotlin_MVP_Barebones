@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/margin_medium"
+    android:layout_marginStart="@dimen/margin_medium"
+    android:background="@drawable/background_card_details"
+    android:focusableInTouchMode="true"
+    android:padding="@dimen/padding_large"
+    tools:background="?android:attr/colorPrimary">
+
+    <com.enovlab.yoop.ui.widget.CardInputView
+        android:id="@+id/input_card_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="0123456789 "
+        android:focusable="true"
+        android:focusedByDefault="true"
+        android:hint="@string/payments_card_number"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="noExcludeDescendants"
+        android:inputType="number"
+        android:maxLength="19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="4111 1111 1111 1111" />
+
+    <com.enovlab.yoop.ui.widget.ExpiryInputView
+        android:id="@+id/input_card_expiry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:digits="0123456789/"
+        android:hint="@string/payments_expiry"
+        android:imeOptions="actionNext"
+        android:importantForAutofill="noExcludeDescendants"
+        android:inputType="number"
+        android:maxLength="5"
+        app:layout_constraintEnd_toStartOf="@id/input_card_cvv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_card_number"
+        tools:text="07/31" />
+
+    <com.enovlab.yoop.ui.widget.InputView
+        android:id="@+id/input_card_cvv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_super_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:digits="0123456789"
+        android:hint="@string/payments_cvv"
+        android:imeOptions="actionDone"
+        android:importantForAutofill="noExcludeDescendants"
+        android:inputType="number"
+        android:maxLength="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/input_card_expiry"
+        app:layout_constraintTop_toBottomOf="@+id/input_card_number"
+        tools:text="421" />
+</android.support.constraint.ConstraintLayout>

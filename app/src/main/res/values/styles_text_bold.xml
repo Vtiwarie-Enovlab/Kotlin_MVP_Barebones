@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text.Bold">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="Text.Bold.Caption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Text.Bold.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.Bold.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="Text.Bold.Title">
+        <item name="android:textSize">@dimen/text_size_title</item>
+    </style>
+
+    <style name="Text.Bold.Header">
+        <item name="android:textSize">@dimen/text_size_header</item>
+    </style>
+
+    <style name="Text.Bold.Headline">
+        <item name="android:textSize">@dimen/text_size_headline</item>
+    </style>
+
+    <style name="Text.Bold.Caption.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Bold.Medium.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Bold.Medium.Accent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Bold.Large.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Bold.Title.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Bold.Header.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Bold.Headline.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+</resources>

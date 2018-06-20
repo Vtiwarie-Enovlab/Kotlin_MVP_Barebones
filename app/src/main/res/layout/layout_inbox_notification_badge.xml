@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/inbox_title"
+        style="@style/Text.Bold.Medium.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_tickets_tab_inbox"/>
+
+    <TextView
+        android:id="@+id/inbox_badge"
+        style="@style/Text.Bold.Caption.White"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/rect_rounded_chance_negligible_small"
+        android:gravity="center"
+        android:layout_marginStart="4dp"
+        android:singleLine="true"
+        android:paddingStart="@dimen/padding_small"
+        android:paddingEnd="@dimen/padding_small"
+        android:visibility="gone"
+        tools:text="2"
+        tools:visibility="visible"/>
+
+</LinearLayout>

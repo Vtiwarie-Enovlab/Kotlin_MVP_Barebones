@@ -1,0 +1,1655 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "6af21faacb086d34adf1d55887a570f1",
+    "entities": [
+      {
+        "tableName": "events",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `shortName` TEXT, `shortDescription` TEXT, `longDescription` TEXT, `date` INTEGER, `timeZone` TEXT, `currency` TEXT, `locationName` TEXT, `locationLatitude` REAL, `locationLongitude` REAL, `countryName` TEXT, `geoRegionName` TEXT, `geoRegionAbbreviation` TEXT, `cityName` TEXT, `addressLine1` TEXT, `addressLine2` TEXT, `zipCode` TEXT, `ticketLimit` TEXT, `first_access_end_date` INTEGER, `on_sale_end_date` INTEGER, `minQualifyingPrice` REAL, `earliestMarketplaceStartDateTime` INTEGER, `maxOfferGroupCountInActiveMarketplace` INTEGER, `discoverable` INTEGER, `user_activity` INTEGER, `update_date` INTEGER, `event_key` TEXT, `uuid_prefix` TEXT, `usher_uuid` TEXT, `url` TEXT, `mediaType` TEXT, `seat_map_url` TEXT, `seat_map_short_description` TEXT, `seat_map_long_description` TEXT, `seat_map_display_number` INTEGER, `marketplaceId` TEXT, `type` TEXT, `startDate` INTEGER, `endDate` INTEGER, `user_first_name` TEXT, `user_last_name` TEXT, `user_photo` TEXT, `user_event_ready` INTEGER, `user_photo_verified` INTEGER, `user_email_verified` INTEGER, `user_email` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shortName",
+            "columnName": "shortName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "shortDescription",
+            "columnName": "shortDescription",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longDescription",
+            "columnName": "longDescription",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "timeZone",
+            "columnName": "timeZone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "currency",
+            "columnName": "currency",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationName",
+            "columnName": "locationName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationLatitude",
+            "columnName": "locationLatitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationLongitude",
+            "columnName": "locationLongitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryName",
+            "columnName": "countryName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "geoRegionName",
+            "columnName": "geoRegionName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "geoRegionAbbreviation",
+            "columnName": "geoRegionAbbreviation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cityName",
+            "columnName": "cityName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addressLine1",
+            "columnName": "addressLine1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addressLine2",
+            "columnName": "addressLine2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zipCode",
+            "columnName": "zipCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ticketLimit",
+            "columnName": "ticketLimit",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstAccessEndDate",
+            "columnName": "first_access_end_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "onSaleEndDate",
+            "columnName": "on_sale_end_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "minQualifyingPrice",
+            "columnName": "minQualifyingPrice",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "earliestMarketplaceStartDateTime",
+            "columnName": "earliestMarketplaceStartDateTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "maxOfferGroupCountInActiveMarketplace",
+            "columnName": "maxOfferGroupCountInActiveMarketplace",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "discoverable",
+            "columnName": "discoverable",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userActivity",
+            "columnName": "user_activity",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "updateDate",
+            "columnName": "update_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userEventKey",
+            "columnName": "event_key",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userUUIDPrefix",
+            "columnName": "uuid_prefix",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "usherUUID",
+            "columnName": "usher_uuid",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "defaultMedia.url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "defaultMedia.mediaType",
+            "columnName": "mediaType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seatMap.url",
+            "columnName": "seat_map_url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seatMap.shortDescription",
+            "columnName": "seat_map_short_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seatMap.longDescription",
+            "columnName": "seat_map_long_description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seatMap.displayNumber",
+            "columnName": "seat_map_display_number",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextMarketplace.marketplaceId",
+            "columnName": "marketplaceId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextMarketplace.type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextMarketplace.startDate",
+            "columnName": "startDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nextMarketplace.endDate",
+            "columnName": "endDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.firstName",
+            "columnName": "user_first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.lastName",
+            "columnName": "user_last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.photo",
+            "columnName": "user_photo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.eventReady",
+            "columnName": "user_event_ready",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.photoVerified",
+            "columnName": "user_photo_verified",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.emailVerified",
+            "columnName": "user_email_verified",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userInfo.email",
+            "columnName": "user_email",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_events_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_events_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "event_media",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `event_id` TEXT, `type` TEXT, `url` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`event_id`) REFERENCES `events`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_event_media_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_event_media_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_event_media_event_id",
+            "unique": false,
+            "columnNames": [
+              "event_id"
+            ],
+            "createSql": "CREATE  INDEX `index_event_media_event_id` ON `${TABLE_NAME}` (`event_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "events",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "event_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "marketplace_info",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `event_id` TEXT, `startDate` INTEGER, `endDate` INTEGER, `auctionStartDate` INTEGER, `auctionEndDate` INTEGER, `purchaseStartDate` INTEGER, `purchaseEndDate` INTEGER, `limitCount` INTEGER, `dualMarketplaceEnabled` INTEGER, `type` TEXT, `demand` TEXT, `userTicketLimitRemaining` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`event_id`) REFERENCES `events`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "startDate",
+            "columnName": "startDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "endDate",
+            "columnName": "endDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "auctionStartDate",
+            "columnName": "auctionStartDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "auctionEndDate",
+            "columnName": "auctionEndDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "purchaseStartDate",
+            "columnName": "purchaseStartDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "purchaseEndDate",
+            "columnName": "purchaseEndDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "limitCount",
+            "columnName": "limitCount",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dualMarketplaceEnabled",
+            "columnName": "dualMarketplaceEnabled",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "demand",
+            "columnName": "demand",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "userTicketLimitRemaining",
+            "columnName": "userTicketLimitRemaining",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_marketplace_info_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_marketplace_info_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_marketplace_info_event_id",
+            "unique": false,
+            "columnNames": [
+              "event_id"
+            ],
+            "createSql": "CREATE  INDEX `index_marketplace_info_event_id` ON `${TABLE_NAME}` (`event_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "events",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "event_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "offer_groups",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `marketplace_id` TEXT, `numberOfTokens` INTEGER, `numberOfPeopleOnList` INTEGER, `purchasePrice` REAL, `unsoldInventory` INTEGER, `reservePrice` REAL, `averageOfferPrice` REAL, `minQualifyingPrice` REAL, `seatConfigurationType` TEXT, `description` TEXT, `demand` TEXT, `offer_id` TEXT, `retryEndTime` INTEGER, `retryAttemptsLeft` INTEGER, `offer_tokens` INTEGER, `offerStatus` TEXT, `offerSubStatus` TEXT, `chance` TEXT, `cardType` TEXT, `lastDigits` TEXT, `amount` REAL, `displayArchive` INTEGER, `totalAmount` REAL, `totalFees` REAL, `totalTax` REAL, `totalTokenAmount` REAL, `fee_amount` REAL, `fee_value` REAL, `fee_name` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`marketplace_id`) REFERENCES `marketplace_info`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketplaceId",
+            "columnName": "marketplace_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "numberOfTokens",
+            "columnName": "numberOfTokens",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "numberOfPeopleOnList",
+            "columnName": "numberOfPeopleOnList",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "purchasePrice",
+            "columnName": "purchasePrice",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "unsoldInventory",
+            "columnName": "unsoldInventory",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reservePrice",
+            "columnName": "reservePrice",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "averageOfferPrice",
+            "columnName": "averageOfferPrice",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "minQualifyingPrice",
+            "columnName": "minQualifyingPrice",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seatConfigurationType",
+            "columnName": "seatConfigurationType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "demand",
+            "columnName": "demand",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.id",
+            "columnName": "offer_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.retryEndTime",
+            "columnName": "retryEndTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.retryAttemptsLeft",
+            "columnName": "retryAttemptsLeft",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.numberOfTokens",
+            "columnName": "offer_tokens",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.offerStatus",
+            "columnName": "offerStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.offerSubStatus",
+            "columnName": "offerSubStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.chance",
+            "columnName": "chance",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.cardType",
+            "columnName": "cardType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.lastDigits",
+            "columnName": "lastDigits",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.amount",
+            "columnName": "amount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.displayArchive",
+            "columnName": "displayArchive",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalAmount",
+            "columnName": "totalAmount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalFees",
+            "columnName": "totalFees",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalTax",
+            "columnName": "totalTax",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalTokenAmount",
+            "columnName": "totalTokenAmount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.amount",
+            "columnName": "fee_amount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.value",
+            "columnName": "fee_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.name",
+            "columnName": "fee_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_offer_groups_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_offer_groups_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_offer_groups_marketplace_id",
+            "unique": false,
+            "columnNames": [
+              "marketplace_id"
+            ],
+            "createSql": "CREATE  INDEX `index_offer_groups_marketplace_id` ON `${TABLE_NAME}` (`marketplace_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "marketplace_info",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "marketplace_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "token_info",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `event_id` TEXT, `row` TEXT, `seat` TEXT, `section` TEXT, `isAssignee` INTEGER, `selfAssigned` INTEGER, `offer_id` TEXT, `retryEndTime` INTEGER, `retryAttemptsLeft` INTEGER, `offer_tokens` INTEGER, `offerStatus` TEXT, `offerSubStatus` TEXT, `chance` TEXT, `cardType` TEXT, `lastDigits` TEXT, `amount` REAL, `displayArchive` INTEGER, `totalAmount` REAL, `totalFees` REAL, `totalTax` REAL, `totalTokenAmount` REAL, `fee_amount` REAL, `fee_value` REAL, `fee_name` TEXT, `token_assignment_id` TEXT, `eventId` TEXT, `inviteeId` TEXT, `inviterId` TEXT, `email` TEXT, `firstName` TEXT, `lastName` TEXT, `ownerFirstName` TEXT, `ownerLastName` TEXT, `confirmationMessage` TEXT, `assignmentStatus` TEXT, `photoVerified` INTEGER, `eventReady` INTEGER, `photo` TEXT, `lastActionDate` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`event_id`) REFERENCES `events`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "row",
+            "columnName": "row",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "seat",
+            "columnName": "seat",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "section",
+            "columnName": "section",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isAssignee",
+            "columnName": "isAssignee",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "selfAssigned",
+            "columnName": "selfAssigned",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.id",
+            "columnName": "offer_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.retryEndTime",
+            "columnName": "retryEndTime",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.retryAttemptsLeft",
+            "columnName": "retryAttemptsLeft",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.numberOfTokens",
+            "columnName": "offer_tokens",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.offerStatus",
+            "columnName": "offerStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.offerSubStatus",
+            "columnName": "offerSubStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.chance",
+            "columnName": "chance",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.cardType",
+            "columnName": "cardType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.lastDigits",
+            "columnName": "lastDigits",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.amount",
+            "columnName": "amount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.displayArchive",
+            "columnName": "displayArchive",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalAmount",
+            "columnName": "totalAmount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalFees",
+            "columnName": "totalFees",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalTax",
+            "columnName": "totalTax",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.totalTokenAmount",
+            "columnName": "totalTokenAmount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.amount",
+            "columnName": "fee_amount",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.value",
+            "columnName": "fee_value",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "offer.tokenPrice.fee.name",
+            "columnName": "fee_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.id",
+            "columnName": "token_assignment_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.eventId",
+            "columnName": "eventId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.inviteeId",
+            "columnName": "inviteeId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.inviterId",
+            "columnName": "inviterId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.ownerFirstName",
+            "columnName": "ownerFirstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.ownerLastName",
+            "columnName": "ownerLastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.confirmationMessage",
+            "columnName": "confirmationMessage",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.assignmentStatus",
+            "columnName": "assignmentStatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.photoVerified",
+            "columnName": "photoVerified",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.eventReady",
+            "columnName": "eventReady",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.photo",
+            "columnName": "photo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tokenAssignment.lastActionDate",
+            "columnName": "lastActionDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_token_info_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_token_info_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_token_info_event_id",
+            "unique": false,
+            "columnNames": [
+              "event_id"
+            ],
+            "createSql": "CREATE  INDEX `index_token_info_event_id` ON `${TABLE_NAME}` (`event_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "events",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "event_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`email` TEXT NOT NULL, `firstName` TEXT, `lastName` TEXT, `photo` TEXT, `mobileNumber` TEXT, `authToken` TEXT, `authState` TEXT, `locale` TEXT, `photoVerified` INTEGER, `eventReady` INTEGER, `verificationDate` INTEGER, `verificationSeen` INTEGER, `countryName` TEXT, `countryCode` TEXT, `phoneCode` TEXT, PRIMARY KEY(`email`))",
+        "fields": [
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "firstName",
+            "columnName": "firstName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastName",
+            "columnName": "lastName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photo",
+            "columnName": "photo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobileNumber",
+            "columnName": "mobileNumber",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "authToken",
+            "columnName": "authToken",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "authState",
+            "columnName": "authState",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locale",
+            "columnName": "locale",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "photoVerified",
+            "columnName": "photoVerified",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "eventReady",
+            "columnName": "eventReady",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "verificationDate",
+            "columnName": "verificationDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "verificationSeen",
+            "columnName": "verificationSeen",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobileCountry.countryName",
+            "columnName": "countryName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobileCountry.countryCode",
+            "columnName": "countryCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mobileCountry.phoneCode",
+            "columnName": "phoneCode",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "email"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_users_email",
+            "unique": true,
+            "columnNames": [
+              "email"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_users_email` ON `${TABLE_NAME}` (`email`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "payment_methods",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `user_id` TEXT, `cardType` TEXT, `cardHolderName` TEXT, `lastDigits` TEXT, `country` TEXT, `expirationMonth` INTEGER, `expirationYear` INTEGER, `zipCode` TEXT, `is_default` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`user_id`) REFERENCES `users`(`email`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "userId",
+            "columnName": "user_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardType",
+            "columnName": "cardType",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cardHolderName",
+            "columnName": "cardHolderName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "lastDigits",
+            "columnName": "lastDigits",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "expirationMonth",
+            "columnName": "expirationMonth",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "expirationYear",
+            "columnName": "expirationYear",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zipCode",
+            "columnName": "zipCode",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "isDefault",
+            "columnName": "is_default",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_payment_methods_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_payment_methods_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_payment_methods_user_id",
+            "unique": false,
+            "columnNames": [
+              "user_id"
+            ],
+            "createSql": "CREATE  INDEX `index_payment_methods_user_id` ON `${TABLE_NAME}` (`user_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "users",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "user_id"
+            ],
+            "referencedColumns": [
+              "email"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "notifications",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `event_id` TEXT, `type` TEXT, `body` TEXT, `deepLink` TEXT, `createDate` INTEGER, `read` INTEGER, `read_sync` INTEGER, `archived` INTEGER, `archived_sync` INTEGER, `event_name` TEXT, `event_date` INTEGER, `url` TEXT, `mediaType` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "body",
+            "columnName": "body",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "deepLink",
+            "columnName": "deepLink",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createDate",
+            "columnName": "createDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "read",
+            "columnName": "read",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "readSync",
+            "columnName": "read_sync",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "archived",
+            "columnName": "archived",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "archivedSync",
+            "columnName": "archived_sync",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "event.name",
+            "columnName": "event_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "event.date",
+            "columnName": "event_date",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "event.defaultMedia.url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "event.defaultMedia.mediaType",
+            "columnName": "mediaType",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_notifications_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_notifications_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "performers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `url` TEXT, `mediaType` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "defaultMedia.url",
+            "columnName": "url",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "defaultMedia.mediaType",
+            "columnName": "mediaType",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_performers_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_performers_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "event_performers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`event_id` TEXT NOT NULL, `performer_id` TEXT NOT NULL, PRIMARY KEY(`event_id`, `performer_id`), FOREIGN KEY(`event_id`) REFERENCES `events`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION , FOREIGN KEY(`performer_id`) REFERENCES `performers`(`id`) ON UPDATE NO ACTION ON DELETE NO ACTION )",
+        "fields": [
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "performerId",
+            "columnName": "performer_id",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "event_id",
+            "performer_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_event_performers_event_id",
+            "unique": false,
+            "columnNames": [
+              "event_id"
+            ],
+            "createSql": "CREATE  INDEX `index_event_performers_event_id` ON `${TABLE_NAME}` (`event_id`)"
+          },
+          {
+            "name": "index_event_performers_performer_id",
+            "unique": false,
+            "columnNames": [
+              "performer_id"
+            ],
+            "createSql": "CREATE  INDEX `index_event_performers_performer_id` ON `${TABLE_NAME}` (`performer_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "events",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "event_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "performers",
+            "onDelete": "NO ACTION",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "performer_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "cities",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `region_id` TEXT, `region_name` TEXT, `region_abbreviation` TEXT, `country_id` TEXT, `country_name` TEXT, `continent_id` TEXT, `continent_name` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regionId",
+            "columnName": "region_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regionName",
+            "columnName": "region_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "regionAbbreviation",
+            "columnName": "region_abbreviation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryId",
+            "columnName": "country_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryName",
+            "columnName": "country_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "continentId",
+            "columnName": "continent_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "continentName",
+            "columnName": "continent_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_cities_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_cities_id` ON `${TABLE_NAME}` (`id`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "filters",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `locationName` TEXT, `locationId` TEXT, `locationLatitude` REAL, `locationLongitude` REAL, `searchRadius` INTEGER NOT NULL, `saleState` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "locationName",
+            "columnName": "locationName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationId",
+            "columnName": "locationId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationLatitude",
+            "columnName": "locationLatitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationLongitude",
+            "columnName": "locationLongitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "searchRadius",
+            "columnName": "searchRadius",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "saleState",
+            "columnName": "saleState",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "time_line",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `event_id` TEXT, `title` TEXT, `description` TEXT, `rank` INTEGER, PRIMARY KEY(`id`), FOREIGN KEY(`event_id`) REFERENCES `events`(`id`) ON UPDATE CASCADE ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "eventId",
+            "columnName": "event_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rank",
+            "columnName": "rank",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [
+          {
+            "name": "index_time_line_id",
+            "unique": true,
+            "columnNames": [
+              "id"
+            ],
+            "createSql": "CREATE UNIQUE INDEX `index_time_line_id` ON `${TABLE_NAME}` (`id`)"
+          },
+          {
+            "name": "index_time_line_event_id",
+            "unique": false,
+            "columnNames": [
+              "event_id"
+            ],
+            "createSql": "CREATE  INDEX `index_time_line_event_id` ON `${TABLE_NAME}` (`event_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "events",
+            "onDelete": "CASCADE",
+            "onUpdate": "CASCADE",
+            "columns": [
+              "event_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"6af21faacb086d34adf1d55887a570f1\")"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/action_discover"
+        android:title="@string/menu_main_discover"
+        android:icon="@drawable/ic_discover_white" />
+
+    <item android:id="@+id/action_my_tickets"
+        android:title="@string/menu_main_my_tickets"
+        android:icon="@drawable/ic_tickets_white" />
+
+    <item android:id="@+id/action_account"
+        android:title="@string/menu_main_account"
+        android:icon="@drawable/ic_profile_white" />
+</menu>

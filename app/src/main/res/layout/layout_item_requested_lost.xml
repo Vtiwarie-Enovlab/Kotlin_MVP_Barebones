@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/container_lost_on_sale"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_rounded_alpha_7"
+        android:padding="20dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/requested_lost_on_sale_header"
+            style="@style/Text.Medium.Caption.SemiWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_on_sale_white_50_18dp"
+            android:drawablePadding="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            tools:text="3 On-Sale Offers"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/requested_lost_on_sale_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_requested_transaction_lost"
+            tools:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/container_lost_list"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rect_rounded_alpha_7"
+        android:padding="20dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/requested_lost_list_header"
+            style="@style/Text.Medium.Caption.SemiWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:drawableStart="@drawable/ic_list_white_50_18dp"
+            android:drawablePadding="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            tools:text="3 List Requests"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/requested_lost_list_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_requested_transaction_lost"
+            tools:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

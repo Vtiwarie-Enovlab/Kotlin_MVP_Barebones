@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_transaction_review_prices"
+    tools:background="?android:attr/colorPrimary"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/payments_card_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/payments_card_icon"
+            android:layout_width="45dp"
+            android:layout_height="24dp"
+            tools:src="@drawable/icon_payment_card_visa"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/payments_card_number"
+            style="@style/Text.Bold.Medium.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:text="****  0152" />
+
+        <ImageView
+            android:id="@+id/payments_card_arrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_arrow_right_payments"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_payments"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:background="@color/color_white_alpha_50"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payments_card_details"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+
+        <TextView
+            android:id="@+id/payments_autoprocess_title"
+            style="@style/Text.Bold.Medium.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transaction_review_auto_process_title"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/payments_autoprocess_help"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_help"
+            android:visibility="gone"
+            android:layout_toEndOf="@id/payments_autoprocess_title"
+            android:layout_alignTop="@id/payments_autoprocess_title"
+            android:layout_alignBottom="@id/payments_autoprocess_title"
+            tools:visibility="visible"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/payment_choose_date"
+            style="@style/Text.Medium.Caption.SemiWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_white_alpha_50"
+            android:textSize="13sp"
+            tools:text="Winners will be chosen Monday 2/26."
+            tools:visibility="visible"
+            android:layout_below="@id/payments_autoprocess_title"/>
+
+        <Switch
+            android:id="@+id/payments_autoprocess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

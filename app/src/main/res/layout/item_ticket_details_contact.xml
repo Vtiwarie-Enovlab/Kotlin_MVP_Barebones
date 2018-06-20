@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:foreground="?android:attr/selectableItemBackground"
+    tools:background="?android:attr/colorPrimary"
+    tools:ignore="Overdraw">
+
+    <TextView
+        android:id="@+id/contact_name"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/margin_small"
+        android:singleLine="true"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/contact_email"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Amy Clark" />
+
+    <TextView
+        android:id="@+id/contact_email"
+        style="@style/Text.Medium.Caption.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:textColor="@color/color_white_alpha_70"
+        android:textSize="13sp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/arrow"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contact_name"
+        tools:text="amyclark@gmail.com" />
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_right_white_24dp"
+        tools:ignore="ContentDescription" />
+
+</android.support.constraint.ConstraintLayout>

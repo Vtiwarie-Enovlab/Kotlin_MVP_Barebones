@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="?android:attr/colorPrimary"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="@dimen/landing_transactions_height"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_white_alpha_50"/>
+
+    <include
+        android:id="@+id/container_transactions"
+        layout="@layout/layout_event_landing_container_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/landing_transactions_height"
+        android:layout_gravity="bottom" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/transaction_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="12dp"
+        android:background="?android:attr/colorPrimary"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+</LinearLayout>

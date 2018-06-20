@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text.Medium">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="Text.Medium.Caption">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="Text.Medium.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.Medium.Medium.Green">
+        <item name="android:textColor">@color/color_on_sale_chance_great</item>
+    </style>
+
+    <style name="Text.Medium.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="Text.Medium.Subheader">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="Text.Medium.Header">
+        <item name="android:textSize">@dimen/text_size_header</item>
+    </style>
+
+    <style name="Text.Medium.Headline">
+        <item name="android:textSize">@dimen/text_size_headline</item>
+    </style>
+
+    <style name="Text.Medium.Caption.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Medium.Caption.SemiWhite">
+        <item name="android:textColor">@color/color_white_alpha_50</item>
+    </style>
+
+    <style name="Text.Medium.Medium.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Medium.Large.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Medium.Subheader.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Medium.Header.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Medium.Headline.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+</resources>

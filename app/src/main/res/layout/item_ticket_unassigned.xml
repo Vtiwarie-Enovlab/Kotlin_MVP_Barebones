@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardUseCompatPadding="false"
+    app:cardCornerRadius="@dimen/padding_default"
+    app:cardBackgroundColor="@color/color_white_alpha_15"
+    app:cardElevation="0dp"
+    tools:layout_margin="24dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/ticket_page_background"
+            android:layout_width="146dp"
+            android:layout_height="146dp"
+            android:background="@drawable/oval_ticket_item"
+            app:layout_constraintBottom_toTopOf="@+id/guideline10"
+            app:layout_constraintEnd_toStartOf="@+id/guideline9" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="73dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="73dp" />
+
+        <TextView
+            android:id="@+id/ticket_page"
+            style="@style/Text.Bold.Headline.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/color_white_alpha_30"
+            android:textSize="40sp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="2" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ticket_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:scaleType="centerCrop"
+            android:src="@color/color_white_alpha_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ticket_status"
+            style="@style/Text.Bold.Caption.White"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="78dp"
+            android:background="@drawable/rect_rounded_chance_negligible"
+            android:gravity="center"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:text="@string/ticket_details_status_unassigned"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="@+id/ticket_image"
+            app:layout_constraintStart_toStartOf="@+id/ticket_image"
+            app:layout_constraintTop_toTopOf="@+id/ticket_image" />
+
+        <TextView
+            android:id="@+id/ticket_username"
+            style="@style/Text.Bold.Headline.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:textColor="@color/color_white_alpha_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_image"
+            tools:text="Ticket 2" />
+
+        <TextView
+            android:id="@+id/ticket_section"
+            style="@style/Text.Medium.Large.White"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:textColor="@color/color_white_alpha_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_username"
+            tools:text="General Admission" />
+
+        <RelativeLayout
+            android:id="@+id/ticket_status_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/ticket_status_ready"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_section"
+            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ticket_status_transfer_state"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@android:color/transparent"
+                app:civ_border_color="@color/color_white"
+                app:civ_border_width="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/ticket_status_transfer_title"
+                style="@style/Text.Bold.Large.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/ticket_status_transfer_state"
+                android:text="@string/ticket_details_transfer_ticket" />
+
+            <TextView
+                android:id="@+id/ticket_status_transfer_caption"
+                style="@style/Text.Medium.Caption.White"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ticket_status_transfer_title"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/ticket_status_transfer_state"
+                tools:textColor="@color/color_on_sale_chance_wont"
+                tools:text="amy@gmail.com declined" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ticket_status_ready"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/ticket_status_verified"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_status_transfer">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ticket_status_ready_state"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@android:color/transparent"
+                app:civ_border_color="@color/color_white"
+                app:civ_border_width="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/ticket_status_ready_title"
+                style="@style/Text.Bold.Large.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/ticket_status_ready_state"
+                android:text="@string/ticket_details_status_event_ready" />
+
+            <TextView
+                android:id="@+id/ticket_status_ready_caption"
+                style="@style/Text.Medium.Caption.White"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ticket_status_ready_title"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/ticket_status_ready_state"
+                android:text="@string/ticket_details_status_ready_caption" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ticket_status_verified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/ticket_transfer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ticket_status_ready">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ticket_status_verified_state"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@android:color/transparent"
+                app:civ_border_color="@color/color_white"
+                app:civ_border_width="2dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"/>
+
+            <TextView
+                android:id="@+id/ticket_status_verified_title"
+                style="@style/Text.Bold.Large.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/ticket_status_verified_state"
+                android:text="@string/ticket_details_status_verified_user" />
+
+            <TextView
+                android:id="@+id/ticket_status_verified_caption"
+                style="@style/Text.Medium.Caption.White"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ticket_status_verified_title"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="4dp"
+                android:layout_toEndOf="@id/ticket_status_verified_state"
+                android:text="@string/ticket_details_status_verified_caption" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/ticket_transfer"
+            style="@style/Button.Accent"
+            android:layout_width="0dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/ticket_details_transfer_ticket"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

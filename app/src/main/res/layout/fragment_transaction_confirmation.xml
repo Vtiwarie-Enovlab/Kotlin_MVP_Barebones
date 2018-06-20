@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:background="?android:attr/colorPrimary">
+
+    <FrameLayout
+        android:id="@+id/player_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/foreground_player_mask">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:use_controller="false"
+            tools:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/loop_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/headline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.enovlab.yoop.ui.widget.LoopImageView
+            android:id="@+id/picture_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:transitionName="@string/transition_name_profile_picture" />
+
+        <com.enovlab.yoop.ui.widget.LoopImageView
+            android:id="@+id/picture_performer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/picture_profile"
+            android:transitionName="@string/transition_name_performer_picture" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/loop_line"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:background="?attr/colorAccent"
+        android:transitionName="@string/transition_name_loop_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headline"
+        style="@style/Text.Bold.Headline.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:gravity="center"
+        android:alpha="0.0"
+        tools:alpha="1"
+        android:text="@string/transaction_confirmation_list"
+        app:layout_constraintTop_toBottomOf="@id/loop_line" />
+
+</android.support.constraint.ConstraintLayout>

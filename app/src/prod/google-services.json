@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1031085575432",
+    "firebase_url": "https://yoop-prod-na.firebaseio.com",
+    "project_id": "yoop-prod-na",
+    "storage_bucket": "yoop-prod-na.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031085575432:android:7e185c01bf75541b",
+        "android_client_info": {
+          "package_name": "com.enovlab.yoop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031085575432-bq08rihggitqqr10gkb12qsehrds12qs.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1031085575432-bq08rihggitqqr10gkb12qsehrds12qs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDc_ft5eis2-t5oxiueaLphoVqqtMLNfog"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

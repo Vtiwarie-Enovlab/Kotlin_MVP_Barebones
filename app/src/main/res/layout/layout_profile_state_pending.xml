@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_photo_pending"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_account_loop"
+        app:civ_border_color="?android:attr/colorAccent"
+        app:civ_border_width="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profile_edit_pending"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_edit_white_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/profile_username_pending"
+        style="@style/Text.Bold.Headline.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_photo_pending"
+        tools:text="Jonathan Thomas" />
+
+    <TextView
+        android:id="@+id/profile_email_pending"
+        style="@style/Text.Medium.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/color_white_alpha_50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_username_pending"
+        tools:text="jonathan@gmail.com" />
+
+    <TextView
+        android:id="@+id/profile_caption_pending"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/profile_pending_caption"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_email_pending" />
+
+</android.support.constraint.ConstraintLayout>

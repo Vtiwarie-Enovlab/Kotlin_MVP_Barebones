@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_input_error"
+    android:paddingBottom="@dimen/padding_large"
+    android:paddingEnd="@dimen/padding_default"
+    android:paddingStart="@dimen/padding_default"
+    android:paddingTop="@dimen/padding_default"
+    tools:ignore="Overdraw">
+
+    <ImageButton
+        android:id="@+id/close"
+        style="@style/ImageButton"
+        android:layout_width="@dimen/icon_size_default"
+        android:layout_height="@dimen/icon_size_default"
+        android:src="@drawable/ic_close_white_24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:id="@+id/message"
+        style="@style/Text.Medium.Subheader.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_default"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintBottom_toTopOf="@+id/action"
+        app:layout_constraintEnd_toStartOf="@+id/close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="This email is already tied to account. Try logging in." />
+
+    <Button
+        android:id="@+id/action"
+        style="@style/Button.White"
+        android:layout_marginTop="@dimen/margin_default"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/color_input_error"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message"
+        tools:text="LOG IN"
+        tools:visibility="visible" />
+
+</android.support.constraint.ConstraintLayout>

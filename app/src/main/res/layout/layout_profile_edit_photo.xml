@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_edit_profile_photo"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_photo"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_account_loop"
+        app:civ_border_color="@color/colorAccent_alpha_50"
+        app:civ_border_width="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_verified"
+        style="@style/Text.Bold.Caption.White"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/rect_rounded_accent"
+        android:gravity="center"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textAllCaps="true"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline8"
+        tools:text="VERIFIED" />
+
+    <TextView
+        android:id="@+id/profile_edit_photo_title"
+        style="@style/Text.Bold.Header.White"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/profile_edit_photo_caption"
+        app:layout_constraintEnd_toStartOf="@+id/profile_icon_arrow"
+        app:layout_constraintStart_toEndOf="@+id/profile_photo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Make Yoop ID" />
+
+    <TextView
+        android:id="@+id/profile_edit_photo_caption"
+        style="@style/Text.Medium.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/color_white_alpha_70"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/profile_icon_arrow"
+        app:layout_constraintStart_toEndOf="@+id/profile_photo"
+        app:layout_constraintTop_toBottomOf="@+id/profile_edit_photo_title"
+        tools:text="We will use it to verify you at your first event. " />
+
+    <ImageView
+        android:id="@+id/profile_icon_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_arrow_right_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="29dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_timeline_background"
+        android:animateLayoutChanges="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/inbox_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/nav_bar_height"
+            android:paddingTop="@dimen/padding_large"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_inbox_event" />
+
+        <LinearLayout
+            android:id="@+id/inbox_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/inbox_nonauth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/ic_notificaions"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/Text.Bold.Headline.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_default"
+                android:gravity="center"
+                android:text="@string/my_ticket_inbox_empty_title" />
+
+            <TextView
+                style="@style/Text.Medium.Subheader.White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:gravity="center"
+                android:text="@string/my_ticket_inbox_empty_caption" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/inbox_nonauth"
+            layout="@layout/layout_transaction_review_non_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="gone"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

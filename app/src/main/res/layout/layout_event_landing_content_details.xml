@@ -1,0 +1,99 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:background="?android:attr/colorPrimary">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp">
+
+        <RelativeLayout
+            android:id="@+id/container_pictures"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/yoop_widget_loop_height"
+            android:layout_marginStart="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <com.enovlab.yoop.ui.widget.LoopImageView
+                android:id="@+id/picture_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="-6dp"
+                android:transitionName="@string/transition_name_profile_picture"/>
+
+            <com.enovlab.yoop.ui.widget.LoopImageView
+                android:id="@+id/picture_performer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-6dp"
+                android:layout_toEndOf="@id/picture_profile"
+                android:transitionName="@string/transition_name_performer_picture"/>
+
+            <View
+                android:id="@+id/loop_line"
+                android:layout_width="match_parent"
+                android:layout_height="9dp"
+                android:background="?android:attr/colorAccent"
+                android:layout_alignBottom="@id/picture_performer"
+                android:transitionName="@string/transition_name_loop_line"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_going"
+            style="@style/Text.Bold.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="13sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="@string/event_landing_you_re_going"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/rect_rounded_white"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/event_name"
+        style="@style/Text.Bold.Headline.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="6dp"
+        android:textAllCaps="true"
+        tools:text="Event Name" />
+
+    <TextView
+        android:id="@+id/event_date"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_default"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableStart="@drawable/ic_date_white_18dp"
+        tools:text="Event Date" />
+
+    <TextView
+        android:id="@+id/event_location"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableStart="@drawable/ic_location_white_18dp"
+        tools:text="Event Location" />
+
+</LinearLayout>

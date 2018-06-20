@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text.Regular">
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="Text.Regular.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="Text.Regular.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
+    <style name="Text.Regular.Medium.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+    <style name="Text.Regular.Large.White">
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+
+</resources>

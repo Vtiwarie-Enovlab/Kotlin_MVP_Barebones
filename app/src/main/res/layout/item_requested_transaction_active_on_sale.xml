@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_event_landing_transaction"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:padding="20dp"
+    tools:background="?android:attr/colorPrimary">
+
+    <TextView
+        android:id="@+id/requested_on_sale_description"
+        style="@style/Text.Bold.Large.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/requested_on_sale_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1x Middle Balcony" />
+
+    <TextView
+        android:id="@+id/requested_on_sale_chances"
+        style="@style/Text.Medium.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/requested_on_sale_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requested_on_sale_description"
+        tools:text="Your chances are ok."
+        tools:textColor="@color/color_on_sale_chance_ok" />
+
+    <TextView
+        android:id="@+id/requested_on_sale_price"
+        style="@style/Text.Bold.Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/requested_on_sale_price_each"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textColor="@color/color_on_sale_chance_ok"
+        tools:text="$59" />
+
+    <TextView
+        android:id="@+id/requested_on_sale_price_each"
+        style="@style/Text.Bold.Header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/requested_on_sale_price"
+        app:layout_constraintEnd_toStartOf="@+id/requested_on_sale_edit"
+        tools:textColor="@color/color_on_sale_chance_ok"
+        android:text="@string/event_landing_transaction_each" />
+
+    <ImageView
+        android:id="@+id/requested_on_sale_edit"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_edit_white_24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/requested_on_sale_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/requested_on_sale_price"
+        app:layout_constraintVertical_bias="0.7"
+        tools:ignore="ContentDescription" />
+
+</android.support.constraint.ConstraintLayout>

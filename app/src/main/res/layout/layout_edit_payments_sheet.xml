@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:background="?android:attr/colorPrimary">
+
+    <include layout="@layout/layout_dialog_separator" />
+
+    <FrameLayout
+        android:id="@+id/payments_add"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_button_accent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_add_white_24dp"
+            tools:ignore="ContentDescription"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/payments_header"
+        style="@style/Text.Bold.Title.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:text="@string/payments_methods"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/payments_add"
+        app:layout_constraintEnd_toStartOf="@+id/payments_add"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/payments_add" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/payments_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_transaction_review_payments"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payments_add" />
+
+    <android.support.constraint.Group
+        android:id="@+id/payments_group_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="payments_list,payments_add" />
+
+    <ProgressBar
+        android:id="@+id/progress_payment_select"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/payments_add" />
+
+</android.support.constraint.ConstraintLayout>

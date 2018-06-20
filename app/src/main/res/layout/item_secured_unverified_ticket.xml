@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="?android:attr/colorAccent"
+    app:cardCornerRadius="@dimen/padding_default"
+    app:cardElevation="0dp"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Text.Bold.Headline.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginEnd="@dimen/padding_super_large"
+            android:layout_marginStart="@dimen/padding_super_large"
+            android:layout_marginTop="@dimen/padding_super_large"
+            android:text="@string/my_tickets_secured_unverified_header"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/create_id"
+            style="@style/Button.White"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_super_large"
+            android:text="@string/my_tickets_secured_create_yoop_id" />
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
