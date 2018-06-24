@@ -11,9 +11,6 @@ import java.io.File
 import java.io.FileOutputStream
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 1/22/2018.
- */
 class FileManagerImpl
 @Inject constructor(private val schedulers: RxSchedulers,
                     private val context: Context) : FileManager {

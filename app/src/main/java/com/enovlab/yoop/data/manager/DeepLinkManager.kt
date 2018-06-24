@@ -6,9 +6,6 @@ import android.text.Html
 import com.enovlab.yoop.BuildConfig
 import timber.log.Timber
 
-/**
- * Created by Max Toskhoparan on 1/10/2018.
- */
 object DeepLinkManager {
 
     // parse deep link uri, returns Discover by default

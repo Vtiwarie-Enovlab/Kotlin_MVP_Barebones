@@ -1,61 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-
-    android:id="@+id/coordinator"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:background="@color/colorPrimary">
+    android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/container_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <FrameLayout
-        android:id="@+id/deep_link_progress"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="gone"
-        tools:visibility="gone"
-        android:background="@color/color_black_alpha_70"
-        android:elevation="6dp">
-
-        <ProgressBar
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_gravity="center"
-            android:indeterminate="true"
-            android:indeterminateTint="@color/color_white" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_anchor="@+id/container_main"
-        app:layout_anchorGravity="bottom">
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/main_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/nav_bar_height"
-            android:background="@color/colorPrimaryDark"
-            android:theme="@style/Widget.BottomNavigationView"
-            app:elevation="@dimen/nav_bar_elevation"
-            app:itemIconTint="@drawable/background_bottom_bar_icons"
-            app:itemTextColor="@drawable/background_bottom_bar_text"
-            app:menu="@menu/menu_navigation_main"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/color_white_alpha_20"
-            android:elevation="5dp"/>
-
-    </FrameLayout>
-</android.support.design.widget.CoordinatorLayout>
+</FrameLayout>

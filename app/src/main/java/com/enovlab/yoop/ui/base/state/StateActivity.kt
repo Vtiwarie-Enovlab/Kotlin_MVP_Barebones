@@ -4,13 +4,8 @@ import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.os.Bundle
 import android.view.View
-import com.enovlab.yoop.R
 import com.enovlab.yoop.ui.base.BaseActivity
-import com.enovlab.yoop.ui.widget.YoopSnackbar
 
-/**
- * Created by Max Toskhoparan on 2/13/2018.
- */
 abstract class StateActivity<V : StateView, VM : StateViewModel<V>, N : ViewModel> : BaseActivity<N>(), StateView {
 
     protected abstract val vmClass: Class<VM>
@@ -49,13 +44,13 @@ abstract class StateActivity<V : StateView, VM : StateViewModel<V>, N : ViewMode
 
     override fun showError(message: String?) {
         val content = findViewById<View>(android.R.id.content)
-        if (message != null)
-            YoopSnackbar.make(content).text(message).show()
+        if (message != null) {}
+//            YoopSnackbar.make(content).text(message).show()
     }
 
     override fun showErrorNoConnection() {
         val content = findViewById<View>(android.R.id.content)
-        YoopSnackbar.make(content).text(getString(R.string.connection_error)).show()
+//        YoopSnackbar.make(content).text(getString(R.string.connection_error)).show()
     }
 
     override fun showErrorUnauthorized() {

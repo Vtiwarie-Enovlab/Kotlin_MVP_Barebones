@@ -2,9 +2,6 @@ package com.enovlab.yoop.ui.base.list
 
 import android.support.v7.widget.RecyclerView
 
-/**
- * Created by Max Toskhoparan on 12/4/2017.
- */
 abstract class LoadingAdapter<E> : BaseAdapter<E, BaseViewHolder>() {
 
     private val loadingMoreItemPosition: Int

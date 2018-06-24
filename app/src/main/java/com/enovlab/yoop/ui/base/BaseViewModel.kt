@@ -6,9 +6,6 @@ import android.arch.lifecycle.OnLifecycleEvent
 import android.arch.lifecycle.ViewModel
 import android.support.annotation.CallSuper
 
-/**
- * Created by Max Toskhoparan on 2/13/2018.
- */
 abstract class BaseViewModel<V : BaseView> : ViewModel(), LifecycleObserver {
 
     protected var view: V? = null

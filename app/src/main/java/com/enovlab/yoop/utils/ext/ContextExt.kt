@@ -27,10 +27,6 @@ import net.yslibrary.android.keyboardvisibilityevent.Unregistrar
 import timber.log.Timber
 import java.util.*
 
-/**
- * Created by Max Toskhoparan on 1/12/2018.
- */
-
 fun <T : Context> T.displaySize(): Pair<Int, Int> {
     val wm = getSystemService(Context.WINDOW_SERVICE) as WindowManager
     val display = wm.defaultDisplay

@@ -3,9 +3,6 @@ package com.enovlab.yoop.ui.base.state
 import com.enovlab.yoop.R
 import com.enovlab.yoop.ui.base.BaseFragment
 
-/**
- * Created by Max Toskhoparan on 2/13/2018.
- */
 abstract class StateFragment<V : StateView, VM : StateViewModel<V>> : BaseFragment<V, VM>(), StateView {
 
     override fun showLoadingIndicator(active: Boolean) {
@@ -33,11 +30,11 @@ abstract class StateFragment<V : StateView, VM : StateViewModel<V>> : BaseFragme
     }
 
     override fun showError(message: String?) {
-        if (view != null && message != null) showSnackbar(view!!, message)
+//        if (view != null && message != null) showSnackbar(view!!, message)
     }
 
     override fun showErrorNoConnection() {
-        if (view != null) showSnackbar(view!!, getString(R.string.connection_error))
+//        if (view != null) showSnackbar(view!!, getString(R.string.connection_error))
     }
 
     override fun showErrorUnauthorized() {

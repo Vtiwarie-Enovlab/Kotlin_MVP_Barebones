@@ -21,9 +21,6 @@ import java.net.HttpURLConnection.HTTP_UNAUTHORIZED
 import java.net.UnknownHostException
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 2/13/2018.
- */
 abstract class StateViewModel<V : StateView> : BaseViewModel<V>() {
 
     @Inject lateinit var preferences: AppPreferences
@@ -82,13 +79,13 @@ abstract class StateViewModel<V : StateView> : BaseViewModel<V>() {
                             state.onNext(State.Error(ErrorType.UNAUTHORIZED))
                             view?.showErrorUnauthorized()
 
-                            // clear database and prefs
-                            disposables += dataManager.clear(error.code() == HTTP_UNAUTHORIZED)
-                                .subscribeOn(schedulers.disk).subscribe({
-                                    Timber.i("Data cleared")
-                                }, {
-                                    Timber.e(it, "Error clearing data")
-                                })
+//                            // clear database and prefs
+//                            disposables += dataManager.clear(error.code() == HTTP_UNAUTHORIZED)
+//                                .subscribeOn(schedulers.disk).subscribe({
+//                                    Timber.i("Data cleared")
+//                                }, {
+//                                    Timber.e(it, "Error clearing data")
+//                                })
                         }
                         else -> {
                             val message = error.response().errorBody()?.message() ?: error.message()

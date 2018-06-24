@@ -29,14 +29,8 @@ import android.widget.TextView
 import androidx.core.view.doOnLayout
 import androidx.core.view.isVisible
 import com.enovlab.yoop.R
-import com.enovlab.yoop.ui.widget.NestedCoordinatorLayout
 import com.enovlab.yoop.utils.WeakHandler
 import com.warkiz.widget.IndicatorSeekBar
-
-
-/**
- * Created by Max Toskhoparan on 12/1/2017.
- */
 
 @Suppress("UNCHECKED_CAST")
 fun <T : View> inflateView(@LayoutRes layoutResId: Int, parent: ViewGroup, attachToRoot: Boolean = false): T {
@@ -147,38 +141,6 @@ fun <S : SpannableStringBuilder> S.listener(start: Int, end: Int, flags: Int, li
     }, start, end, flags)
 }
 
-fun <V : View> CoordinatorLayout.translationYForSnackbar(view: V): Float {
-    var minOffset = 0f
-    getDependencies(view).forEach {
-        if (it is Snackbar.SnackbarLayout && doViewsOverlap(view, it)) {
-            minOffset = Math.min(minOffset, it.translationY - it.getHeight())
-        }
-    }
-    return minOffset
-}
-
-fun View?.findSuitableParent(): ViewGroup? {
-    var view = this
-    var fallback: ViewGroup? = null
-    do {
-        when (view) {
-            is NestedCoordinatorLayout -> fallback = view
-            is CoordinatorLayout -> return view
-            is FrameLayout -> fallback = when {
-                view.id == android.R.id.content -> return view
-                else -> view
-            }
-        }
-
-        if (view != null) {
-            val parent = view.parent
-            view = if (parent is View) parent else null
-        }
-    } while (view != null)
-
-    return fallback
-}
-
 fun <V : RecyclerView> V.pagerSnap() {
     val pagerSnap = PagerSnapHelper()
     pagerSnap.attachToRecyclerView(this)
@@ -208,28 +170,6 @@ fun View.OnClickListener.applyToViews(vararg views: View) {
 
 fun <V : BottomNavigationView> V.check(itemId: Int) {
     menu.findItem(itemId)?.isChecked = true
-}
-
-fun <V : View> V.isImageViewPartiallyHidden(imageView: ImageView): Boolean {
-    val bounds = Rect()
-    getHitRect(bounds)
-    return !imageView.getLocalVisibleRect(bounds) || bounds.height() < imageView.height
-}
-
-fun <V : AppBarLayout> V.disableDragging() {
-    doOnLayout {
-        val params = layoutParams
-        if (params is CoordinatorLayout.LayoutParams) {
-            val behaviour = params.behavior
-            if (behaviour != null && behaviour is AppBarLayout.Behavior) {
-                behaviour.setDragCallback(object : AppBarLayout.Behavior.DragCallback() {
-                    override fun canDrag(appBarLayout: AppBarLayout): Boolean {
-                        return false
-                    }
-                })
-            }
-        }
-    }
 }
 
 fun <V : AppBarLayout> V.scrollYBy(coordinator: CoordinatorLayout, dy: Int) {
@@ -277,37 +217,6 @@ inline fun <V : View> BottomSheetBehavior<V>.listener(crossinline listener: (Int
             listener(newState)
         }
     })
-}
-
-inline fun <V : View> V.postView(crossinline runnable: (V) -> Unit) {
-    post { runnable(this) }
-}
-
-fun BottomNavigationView.addBadge(position: Int, @LayoutRes badgeRes: Int) {
-    // get badge container (parent)
-    val bottomMenu = getChildAt(0) as? BottomNavigationMenuView
-    val itemView = bottomMenu?.getChildAt(position) as? BottomNavigationItemView
-
-    // inflate badge from layout
-    val badge = LayoutInflater.from(context).inflate(badgeRes, bottomMenu, false)
-    badge.tag = BADGE_TAG
-
-    // create badge layout parameter
-    val badgeLayout = FrameLayout.LayoutParams(badge?.layoutParams).apply {
-        gravity = Gravity.CENTER_HORIZONTAL
-        leftMargin = resources.getDimensionPixelSize(R.dimen.margin_large)
-        topMargin = resources.getDimensionPixelSize(R.dimen.badge_top_margin)
-    }
-
-    // add view to bottom bar with layout parameter
-    itemView?.addView(badge, badgeLayout)
-}
-
-fun BottomNavigationView.isBadgeVisible(position: Int, visible: Boolean) {
-    val bottomMenu = getChildAt(0) as? BottomNavigationMenuView
-    val itemView = bottomMenu?.getChildAt(position) as? BottomNavigationItemView
-
-    itemView?.findViewWithTag<View>(BADGE_TAG)?.isVisible = visible
 }
 
 private const val BADGE_TAG = "BADGE_TAG"

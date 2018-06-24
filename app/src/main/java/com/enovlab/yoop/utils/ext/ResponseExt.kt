@@ -5,9 +5,6 @@ import com.google.gson.GsonBuilder
 import okhttp3.ResponseBody
 import timber.log.Timber
 
-/**
- * Created by Max Toskhoparan on 2/15/2018.
- */
 
 fun <T : ResponseBody> T?.message(): String? {
     return this?.use {

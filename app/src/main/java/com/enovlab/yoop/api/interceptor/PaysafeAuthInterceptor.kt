@@ -7,9 +7,6 @@ import okhttp3.Interceptor
 import okhttp3.Response
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 1/16/2018.
- */
 class PaysafeAuthInterceptor @Inject constructor() : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {

@@ -9,9 +9,6 @@ import okhttp3.Response
 import javax.inject.Inject
 import javax.inject.Named
 
-/**
- * Created by Max Toskhoparan on 1/12/2018.
- */
 class BaseAuthInterceptor
 @Inject constructor(private val preferences: AppPreferences,
                     @Named("device_id") private val deviceId: String?) : Interceptor {

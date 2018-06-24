@@ -3,9 +3,6 @@ package com.enovlab.yoop.utils
 import android.animation.ValueAnimator
 import androidx.core.animation.addListener
 
-/**
- * Created by mtosk on 3/12/2018.
- */
 open class UpdateAnimator {
 
     private var expanded = true

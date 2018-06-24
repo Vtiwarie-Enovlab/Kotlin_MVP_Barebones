@@ -3,10 +3,6 @@ package com.enovlab.yoop.data
 import io.reactivex.subjects.PublishSubject
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 1/4/2018.
- */
-
 open class Validation @Inject constructor() {
 
     private val validators = HashMap<Validator, Boolean>()

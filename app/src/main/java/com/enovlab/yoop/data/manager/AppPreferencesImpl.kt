@@ -7,10 +7,6 @@ import com.enovlab.yoop.utils.ext.toLocale
 import java.util.*
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 11/27/2017.
- */
-
 class AppPreferencesImpl
 @Inject constructor(context: Context) : AppPreferences {
 

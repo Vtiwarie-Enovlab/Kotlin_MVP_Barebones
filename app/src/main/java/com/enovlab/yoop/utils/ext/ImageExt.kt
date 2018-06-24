@@ -19,10 +19,6 @@ import com.enovlab.yoop.utils.image.blurr.BlurTransformation
 import com.enovlab.yoop.utils.image.svg.SvgSoftwareLayerSetter
 import java.io.File
 
-/**
- * Created by Max Toskhoparan on 2/15/2018.
- */
-
 fun ImageView.loadImage(url: String?) {
     GlideApp.with(this)
         .load(url)

@@ -6,9 +6,6 @@ import com.enovlab.yoop.ui.base.state.StateFragment
 import com.enovlab.yoop.ui.base.state.StateView
 import com.enovlab.yoop.ui.base.state.StateViewModel
 
-/**
- * Created by mtosk on 3/12/2018.
- */
 abstract class MainFragment <V : StateView, VM : StateViewModel<V>> : StateFragment<V, VM>() {
 
     lateinit var navigator: MainNavigator

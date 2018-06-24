@@ -1,7 +1,7 @@
 package com.enovlab.yoop.inject
 
 import android.content.Context
-import com.enovlab.yoop.YoopApp
+import com.enovlab.yoop.Application
 import com.enovlab.yoop.data.manager.*
 import com.enovlab.yoop.utils.RxSchedulers
 import com.google.firebase.iid.FirebaseInstanceId
@@ -10,15 +10,11 @@ import dagger.Provides
 import javax.inject.Named
 import javax.inject.Singleton
 
-/**
- * Created by Max Toskhoparan on 11/27/2017.
- */
-
 @Module
 class AppModule {
 
     @Provides
-    fun provideContext(app: YoopApp): Context = app.applicationContext
+    fun provideContext(app: Application): Context = app.applicationContext
 
     @Provides
     @Singleton

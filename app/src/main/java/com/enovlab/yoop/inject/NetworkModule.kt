@@ -1,8 +1,6 @@
 package com.enovlab.yoop.inject
 
 import com.enovlab.yoop.BuildConfig
-import com.enovlab.yoop.api.serialize.TokenPriceDeserializer
-import com.enovlab.yoop.data.entity.event.TokenPrice
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
@@ -12,10 +10,6 @@ import okhttp3.logging.HttpLoggingInterceptor
 import java.lang.reflect.Type
 import javax.inject.Singleton
 
-/**
- * Created by Max Toskhoparan on 2/15/2018.
- */
-
 @Module
 class NetworkModule {
 
@@ -24,7 +18,7 @@ class NetworkModule {
     fun provideGson(): Gson {
         return GsonBuilder()
             .setDateFormat(DATE_FORMAT)
-            .registerTypeAdapter(TokenPrice::class.java, TokenPriceDeserializer())
+//            .registerTypeAdapter(TokenPrice::class.java, TokenPriceDeserializer())
             .create()
     }
 

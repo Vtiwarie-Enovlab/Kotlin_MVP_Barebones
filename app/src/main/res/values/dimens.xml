@@ -9,8 +9,6 @@
     <dimen name="text_size_title">22sp</dimen>
     <dimen name="text_size_headline">30sp</dimen>
 
-    <dimen name="progress_bar_size_normal">56dp</dimen>
-
     <dimen name="padding_none">0dp</dimen>
     <dimen name="padding_extra_small">4dp</dimen>
     <dimen name="padding_small">8dp</dimen>
@@ -30,50 +28,6 @@
     <dimen name="margin_double_large">48dp</dimen>
     <dimen name="margin_sub_large">20dp</dimen>
 
-    <dimen name="radius_corners_auth">30dp</dimen>
+    <dimen name="progress_bar_size_normal">56dp</dimen>
 
-    <dimen name="icon_size_default">24dp</dimen>
-    <dimen name="progress_bar_size_fab">22dp</dimen>
-    <dimen name="progress_bar_elevation_fab">8dp</dimen>
-    <dimen name="fab_size">54dp</dimen>
-    <dimen name="underline_size">1dp</dimen>
-    <dimen name="text_input_edit_text_size">36dp</dimen>
-
-    <dimen name="button_size_small">210dp</dimen>
-
-    <dimen name="yoop_widget_loop_width">100dp</dimen>
-    <dimen name="yoop_widget_loop_height">78dp</dimen>
-    <dimen name="yoop_widget_loop_picture">60dp</dimen>
-
-    <dimen name="yoop_snackbar_elevation">6dp</dimen>
-    <dimen name="nav_bar_elevation">4dp</dimen>
-    <dimen name="nav_bar_height">56dp</dimen>
-    
-    <dimen name="loop_stroke_width">2dp</dimen>
-    <dimen name="landing_app_bar_scroll_translation">-76dp</dimen>
-    <dimen name="landing_transactions_height">90dp</dimen>
-    <dimen name="edit_payments_height">90dp</dimen>
-
-    <dimen name="timeline_step_size">14dp</dimen>
-    <dimen name="timeline_step_continue_width">1dp</dimen>
-    <dimen name="timeline_step_continue_height">13dp</dimen>
-    <dimen name="timeline_step_continue_last_height">24dp</dimen>
-    <dimen name="timeline_step_margin">-3dp</dimen>
-
-    <dimen name="seat_map_default_height">300dp</dimen>
-
-    <dimen name="chances_input_view_max_width">70dp</dimen>
-
-    <dimen name="close_add_card_scanner">32dp</dimen>
-    <dimen name="profile_step_size">23dp</dimen>
-    <dimen name="profile_progress_size">1dp</dimen>
-
-    <dimen name="profile_capture_border">20dp</dimen>
-    <dimen name="profile_capture_photo_start">82dp</dimen>
-    <dimen name="profile_capture_circle">198dp</dimen>
-
-    <dimen name="padding_ticket_status">3dp</dimen>
-    <dimen name="peek_height_transfer_dialog">460dp</dimen>
-
-    <dimen name="badge_top_margin">14dp</dimen>
 </resources>

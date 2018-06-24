@@ -2,10 +2,6 @@ package com.enovlab.yoop.data.manager
 
 import java.util.*
 
-/**
- * Created by Max Toskhoparan on 11/27/2017.
- */
-
 interface AppPreferences {
     var authToken: String?
     var firstLaunch: Boolean

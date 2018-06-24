@@ -8,19 +8,15 @@ import android.view.View
 import com.crashlytics.android.Crashlytics
 import com.crashlytics.android.core.CrashlyticsCore
 import com.enovlab.yoop.BuildConfig
-import com.enovlab.yoop.R
 import com.enovlab.yoop.data.manager.AppPreferencesImpl
 import com.enovlab.yoop.utils.RxAwareObserver
-import com.enovlab.yoop.utils.YoopContextWrapper
+import com.enovlab.yoop.utils.AppContextWrapper
 import com.enovlab.yoop.utils.ext.hideKeyboard
 import dagger.android.support.DaggerAppCompatActivity
 import io.fabric.sdk.android.Fabric
 import io.reactivex.subjects.PublishSubject
 import javax.inject.Inject
 
-/**
- * Created by Max Toskhoparan on 2/14/2018.
- */
 abstract class BaseActivity<N : ViewModel> : DaggerAppCompatActivity(), BaseView {
 
     protected abstract fun setupNavigation(navigator: N)
@@ -33,7 +29,7 @@ abstract class BaseActivity<N : ViewModel> : DaggerAppCompatActivity(), BaseView
 
     override fun attachBaseContext(newBase: Context) {
         val preferences = AppPreferencesImpl(newBase)
-        super.attachBaseContext(YoopContextWrapper.wrap(newBase, preferences.locale))
+        super.attachBaseContext(AppContextWrapper.wrap(newBase, preferences.locale))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

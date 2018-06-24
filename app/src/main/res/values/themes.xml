@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.Yoop" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.App" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="Theme.Yoop.Launcher">
-        <item name="android:windowBackground">@drawable/background_splash</item>
+    <style name="Theme.App.Launcher">
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="Theme.Yoop.Input">
+    <style name="Theme.App.Input">
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/color_white_alpha_50</item>
         <item name="colorControlActivated">@color/color_white</item>
     </style>
 
-    <style name="Theme.Yoop.EventLanding">
+    <style name="Theme.App.EventLanding">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
     </style>
@@ -29,45 +28,45 @@
         <item name="android:letterSpacing">0.052</item>
     </style>
 
-    <style name="Theme.Yoop.Transition">
+    <style name="Theme.App.Transition">
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="android:windowContentTransitions">true</item>
         <item name="android:windowAllowEnterTransitionOverlap">false</item>
         <item name="android:windowAllowReturnTransitionOverlap">false</item>
     </style>
 
-    <style name="Theme.Yoop.Transition.ChangeBounds">
+    <style name="Theme.App.Transition.ChangeBounds">
         <item name="android:windowSharedElementEnterTransition">@transition/change_bounds_transform</item>
         <item name="android:windowSharedElementExitTransition">@transition/change_bounds_transform</item>
     </style>
 
-    <style name="Theme.Yoop.Transition.ChangeBounds.Input">
+    <style name="Theme.App.Transition.ChangeBounds.Input">
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/color_white_alpha_50</item>
         <item name="colorControlActivated">@color/color_white</item>
     </style>
 
-    <style name="Theme.Yoop.Transactions">
+    <style name="Theme.App.Transactions">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/color_white_alpha_50</item>
         <item name="colorControlActivated">@color/color_white</item>
     </style>
 
-    <style name="Theme.Yoop.Payments">
+    <style name="Theme.App.Payments">
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/color_white_alpha_50</item>
         <item name="colorControlActivated">@color/color_white</item>
     </style>
 
-    <style name="Theme.Yoop.ProfileEdit">
+    <style name="Theme.App.ProfileEdit">
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/color_white_alpha_70</item>
         <item name="colorControlActivated">@color/color_white</item>
     </style>
 
-    <style name="Theme.Yoop.Settings">
+    <style name="Theme.App.Settings">
         <item name="android:windowBackground">?android:attr/colorPrimary</item>
         <item name="colorControlNormal">@color/colorAccent</item>
         <item name="colorControlActivated">@color/color_white</item>

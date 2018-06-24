@@ -6,9 +6,6 @@ import android.arch.lifecycle.ViewModelProvider
 import javax.inject.Inject
 import javax.inject.Provider
 
-/**
- * Created by Max Toskhoparan on 11/27/2017.
- */
 
 /**
  * ViewModelFactory which uses Dagger to create the instances.

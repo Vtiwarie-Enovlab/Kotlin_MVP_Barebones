@@ -1,13 +1,11 @@
 package com.enovlab.yoop.utils
 
 import io.reactivex.Flowable
+
 import io.reactivex.functions.BiFunction
 import io.reactivex.functions.Function3
 import io.reactivex.functions.Function4
 
-/**
- * Created by mtosk on 3/16/2018.
- */
 object Flowables {
 
     inline fun <T1,T2,R> combineLatest(source1: Flowable<T1>, source2: Flowable<T2>, crossinline combineFunction: (T1, T2) -> R) =

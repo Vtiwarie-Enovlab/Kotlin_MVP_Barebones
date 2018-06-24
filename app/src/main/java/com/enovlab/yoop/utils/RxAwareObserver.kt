@@ -7,9 +7,6 @@ import com.enovlab.yoop.utils.ext.plusAssign
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-/**
- * Created by Max Toskhoparan on 2/28/2018.
- */
 class RxAwareObserver(lifecycle: Lifecycle) : LifecycleObserver {
 
     private val disposables by lazy { CompositeDisposable() }

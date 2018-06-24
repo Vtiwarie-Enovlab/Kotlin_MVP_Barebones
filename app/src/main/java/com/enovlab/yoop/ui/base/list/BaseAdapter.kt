@@ -6,9 +6,6 @@ import android.support.v7.util.DiffUtil
 import android.support.v7.util.ListUpdateCallback
 import android.support.v7.widget.RecyclerView
 
-/**
- * Created by mtosk on 3/12/2018.
- */
 abstract class BaseAdapter<T, VH : RecyclerView.ViewHolder> : RecyclerView.Adapter<VH>() {
 
     protected abstract fun createDiffCallback(): DiffUtil.ItemCallback<T>
